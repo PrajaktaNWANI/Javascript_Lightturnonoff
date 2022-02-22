@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <title>Light On And Off</title>
+    <style>
+        body {
+            background-color: #2a364f;
+        }
+        
+        .container {
+            place-items: center;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)!important;
+        }
+        
+        button {
+            display: inline-block;
+            background: #F8B627;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            width: 200px;
+            text-align: center;
+            border-radius: 3px;
+            transform: 400ms;
+            text-decoration: none;
+            padding: 10px 22px;
+            z-index: 100000;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            margin: 30px 30px;
+        }
+        
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Can You Turn On the Light ?</h1>
+        <button id="btnOn">Turn On The Light</button>
+        <img id="imglight" src="lightoff.png" alt="lightof">
+        <button id="btnOff">Turn Off The Light</button>
+    </div>
+
+
+    <script>
+        btnOn = document.querySelector("#btnOn");
+        btnOff = document.querySelector("#btnOff");
+        imglight = document.querySelector("#imglight");
+
+        btnOn.addEventListener("click", () => {
+            imglight.src = "lighton.png";
+        })
+        btnOff.addEventListener("click", () => {
+            imglight.src = "lightoff.png";
+        })
+    </script>
+</body>
+
+</html>
